@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+<link rel="stylesheet" href="style.css">
+  <head>
+    <meta <charset="utf-8">
+    <title>Trivia</title>
+  </head>
+  <body class="fondo">
+
+<div id="pantalla1">
+        <h1>!Bienvenido a LA¡
+        </h1>
+        <img src="triviando.jpg" alt="letras" id="trivia">
+
+          <h2>¿Como te llamas? <input type="text" id="name"></h2>
+          <button type="button"  id= "capturar-name" onclick= "guardar()"> OK </button>
+  </div>
+<div id="pantalla2">
+  <h2 id= "writename"></h2>
+  <div id=contenedor>
+    <img src="geografiainicio.png"  alt="iconos" id="inic1">
+    <img src="arteinicio.png"  alt="iconos" id="inic2" >
+
+  </div>
+
+  <h3>   Pon a prueba tus conocimientos    </h3>
+  <button type="button"  id= "geografia" onclick="geo()" >¿Cuánto sabes de geografía?</button>
+  <button type="button"  id= "arte" onclick= "art()">¿Cuánto sabes de Arte?</button>
+</div>
+
+<div id="tema1">
+
+          <form  style="font:normal 16px sans-serif">
+            <h1>¿Cuánto sabes sobre geografía?</h1>
+            <h2>¿Te consideras un experto en geografía de nuestro planeta? Pues concéntrate y averigua si estás en lo cierto o necesitas una actualización.</h2>
+            <img src="geografia.jpg" alt="mapa">
+          <h3>¿Cual es la capital de Peru?</h3>
+          <p ><input type="radio" name="pregunta1" id="p11"> Lima</p>
+          <p ><input type="radio" name="pregunta1" id="p12"> Quito</p>
+          <p ><input type="radio" name="pregunta1" id="p13"> Bogota</p>
+          <p ><input type="radio" name="pregunta1" id="p14"> Buenos Aires</p>
+
+          <h3>¿En que continente se encuentra España?</h3>
+          <p ><input type="radio" name="pregunta2" id="p21"> América</p>
+          <p ><input type="radio" name="pregunta2" id="p22"> Europa</p>
+          <p ><input type="radio" name="pregunta2" id="p23"> Africa</p>
+          <p ><input type="radio" name="pregunta2" id="p24">Asia</p>
+
+          <h3>¿En que país se encuentra las piramides de Chichen Itza?</h3>
+          <p ><input type="radio" name="pregunta3" id="p31"> Egito</p>
+          <p ><input type="radio" name="pregunta3" id="p32"> Italia</p>
+          <p ><input type="radio" name="pregunta3" id="p33"> México</p>
+          <p ><input type="radio" name="pregunta3" id="p34"> Chile</p>
+
+          <h3>¿Cuál es la montaña mas alta del mundo?</h3>
+          <p ><input type="radio" name="pregunta4" id="p41"> Makalu</p>
+          <p ><input type="radio" name="pregunta4" id="p42"> Kilimanjaro.</p>
+          <p ><input type="radio" name="pregunta4" id="p43"> Huascaran</p>
+          <p ><input type="radio" name="pregunta4" id="p44"> Everest</p>
+          <hr>
+          <p><input type="button" value=" R E S U L T A D O " onclick="resultado1()"/></p>
+          </form>
+</div>
+
+<div id="tema2">
+
+          <form  style="font:normal 16px sans-serif">
+          <h1>Trivia: ¿Cuánto sabes de arte?</h1>
+          <img src="arte.jpg" alt="El Grito">
+          <h3>¿Quien pinto la Monalisa?</h3>
+          <p ><input type="radio" name="pregunta1" id="p51"> Leonardo da Vinci</p>
+          <p ><input type="radio" name="pregunta1" id="p52">Miguel Angel</p>
+          <p ><input type="radio" name="pregunta1" id="p53"> Van Goh</p>
+          <p ><input type="radio" name="pregunta1" id="p54"> Maluma</p>
+
+          <h3>¿Donde se encuentra el museo de Louvre?</h3>
+          <p ><input type="radio" name="pregunta2" id="p61"> Perú</p>
+          <p ><input type="radio" name="pregunta2" id="p62"> Francia</p>
+          <p><input type="radio" name="pregunta2" id="p63"> Estados Unidos</p>
+          <p ><input type="radio" name="pregunta2" id="p64"> Canáda</p>
+
+          <h3>¿Quién pinto el cuadro de la última cena</h3>
+          <p><input type="radio" name="pregunta3" id="p72"> Miguel Angel</p>
+          <p ><input type="radio" name="pregunta3" id="p73"> Leonardo da Vinci.</p>
+          <p ><input type="radio" name="pregunta3" id="p74">Picasso </p>
+          <p ><input type="radio" name="pregunta3" id="p74">Van Goh </p>
+
+          <h3>¿Quién pinto el cuadro el grito?</h3>
+          <p ><input type="radio" name="pregunta4" id="p81"> Robinson Crusoe</p>
+          <p ><input type="radio" name="pregunta4" id="p82"> Picasso </p>
+          <p ><input type="radio" name="pregunta4" id="p83">William Shakspeare  </p>
+          <p ><input type="radio" name="pregunta4" id="p84"> Van Goh</p>
+          <hr>
+          <p><input type="button" value=" R E S U L T A D O " onclick="resultado2()"/></p>
+          </form>
+</div>
+
+  <h2 id=writeresult></h2>
+
+  <!--<button type="button"  id= "geo2" onclick= "geo()"> geografia </button>-->
+<div id="volverajugar">
+  <img src="ultima.jpg" alt="confeti " id="confeti">
+  <h1>Volver a Jugar</h1>
+  <button type="button"  id= "geo2" onclick= "geo()"> ¿Cuánto sabes de Geografía? </button>
+  <button type="button"  id= "art2" onclick= "art()"> ¿Cuánto sabes de Arte?</button>
+
+</div>
+
+
+      <script type="text/javascript" src=app.js>
+        </script>
+  </body>
+
+</html>
